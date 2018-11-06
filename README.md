@@ -70,6 +70,7 @@ IPAカードで記載された番号の小さい順に，音声データを再�
 - Consonants (pulmonic): No.1 ~ No.59
 - Consonants (non-pulmonic): No.60 ~ No.70, No.109 ~ No.111
 - Other symbols: No.99 ~ No.108
+
 というグループ分けが行われており，この中から再生したいグループを選択することになります．
 
 1. はじめに，Matlabを起動しPlayTrain_IPACard.mファイルを実行します．
@@ -127,6 +128,7 @@ Finish!!!
 - Consonants (pulmonic): No.1 ~ No.59
 - Consonants (non-pulmonic): No.60 ~ No.70, No.109 ~ No.111
 - Other symbols: No.99 ~ No.108
+
 というグループ分けが行われており，この中から再生したいグループ（かるたのレベル）を選択することになります．
 
 1. はじめに，Matlabを起動しPlayTrain_IPACard.mファイルを実行します．
