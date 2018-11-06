@@ -7,8 +7,8 @@
 % Modified: 6 Nov. 2018
 %
 % Example: 
-% > Select game type(s) -> 1 (vowels only)
-% > Select game type(s) -> 1 2 3 (vowels and consonants)
+% > Select type(s) -> 1 (vowels)
+% > Select type(s) -> 1 2 3 (vowels and consonants)
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Set your environment
@@ -32,7 +32,7 @@ clc
 % Set game types
 strMsg = [...
         '========================================\n',...
-        ' IPA Card "Karuta"\n',...
+        ' IPA Card Training\n',...
         ' Author: YamaKatsu (@kyama0321)\n',...
         ' Date: 6 Nov. 2018\n',...
         '========================================\n',...
@@ -45,14 +45,14 @@ fprintf(strMsg);
 % Check inputs
 numSwType = []; % Initialize
 while isempty(numSwType) == 1
-    prompt = 'Select game type(s) -> ';
+    prompt = 'Select training course(s) -> ';
     strSwType = input(prompt,'s');
     numSwType = str2num(strSwType);
 end
 
 % Stack card IDs
 numIPACard = []; % Initialize
-for i = numSwType
+for i = 1:length(numSwType)
     if numSwType(i) == 1 % Vowels: 71~98
         numIPACard = horzcat(numIPACard,[71:98]);
     elseif numSwType(i) == 2     % Consonants (pulmonic): 1~59
@@ -62,20 +62,18 @@ for i = numSwType
     elseif numSwType(i) == 4     % Other symbols: 99~108
         numIPACard = horzcat(numIPACard,[99:108]);
     else                    % All: 1~111;
-        error('Set game type: 1~4');
+        error('Set training courses: 1~4');
     end
 end
 
 
-% Randomizing
-%seed = 20181102;  %with a seed number (option)
-%rng(seed);
-numPlaySnd = randperm(length(numIPACard));
+% Non-Randomizing
+numPlaySnd = 1:length(numIPACard);
 
 
 %% Start IPA Card "Karuta"
 % Waiting
-swRep = '\n\nStart IPA Card "Karuta": RETURN/ENTER';
+swRep = '\n\nStart IPA Card Training: RETURN/ENTER';
 input(swRep);
 
 for j = numPlaySnd
