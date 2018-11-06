@@ -66,10 +66,8 @@ for i = 1:length(numSwType)
     end
 end
 
-
 % Non-Randomizing
 numPlaySnd = 1:length(numIPACard);
-
 
 %% Start IPA Card "Karuta"
 % Waiting
