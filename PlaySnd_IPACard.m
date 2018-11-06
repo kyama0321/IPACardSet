@@ -11,7 +11,7 @@
 % > Select game type(s) -> 1 2 3 (vowels and consonants)
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Set your enviroment
+%% Set your environment
 dirRoot = [getenv('HOME') '/Desktop/IPACardSet/Code/'];
 dirSnd  = [dirRoot 'Sounds/'];
 

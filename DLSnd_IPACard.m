@@ -8,7 +8,7 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%
-% Set your enviroment
+% Set your environment
 dirRoot = [getenv('HOME') '/Desktop/IPACardSet/Code/'];
 dirSnd  = [dirRoot 'Sounds/'];
 
