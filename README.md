@@ -24,6 +24,7 @@ IPAカードセットについては以下のリンクを参照してくださ�
 
 デフォルトの設定で使用したい場合は，スクリプト郡を以下の場所に置いてください．
 > usr/Desktop/IPACardSet/Code/
+
 その他の場合には，各種スクリプトの "%% Set your environment" 下の部分を変更してください．
 
 
@@ -34,11 +35,25 @@ IPAカードセットについては以下のリンクを参照してくださ�
 本スクリプトでは，「IPAカード取扱説明書」に記載されているクレジット情報をもとに，各カードに対応した音声データをダウンロードします．
 
 1. はじめに，Matlabを起動し以下のDLSnd_IPACard.mファイルを実行します．
-> DLSnd_IPACard
+```
+DLSnd_IPACard
+```
+
 1. 以下の画面になったら，Return/Enterキーを押してください．
-> Start downloading files? : RETURN/ENTER
+```
+Start downloading files? : RETURN/ENTER
+```
+
 1. 音声データのダウンロードが開始します．
-> ---Downloarding: IPA Card No.001---
-> ...
+```
+---Downloarding: IPA Card No.001---
+...
+```
+
 1. 以下の画面になったら，全てのファイルがダウンロード完了です．
+```
+========================================
+Finish!!!');
+========================================
+```
 
