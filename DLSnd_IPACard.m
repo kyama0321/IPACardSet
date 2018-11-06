@@ -2,27 +2,37 @@
 %
 % DLSnd_IPACard
 %
-% Yamamoto, K. 
+% YamaKatsu (@kyama0321)
 % Created: 2 Nov. 2018
+% Modified: 6 Nov. 2018
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%
+%%
 % Set your enviroment
-dirRoot = [getenv('HOME') '/Desktop/TmpFiles/IPACardSet/'];
+dirRoot = [getenv('HOME') '/Desktop/IPACardSet/Code/'];
 dirSnd  = [dirRoot 'Sounds/'];
-%%%%%%%%%%%%%%%%%%%%%
 
-% Load a list of the IPACard
-nameListSnd = 'IPACard_ListSnd.csv';
+% Make 'Sounds' folder
+if exist(dirSnd) ~= 7
+    mkdir(dirSnd);
+end
+
+% Load a download list of the IPA Card Set
+nameListSnd = 'ListSnd_IPACard.csv';
 formatSpec = '%s';
-fileID = fopen(nameListSnd);
+fileID = fopen([dirRoot nameListSnd]);
 strListSnd = textscan(fileID,formatSpec);
 fclose(fileID);
 
-% Start downloarding
+
+%% Start downloading files
+% Waiting
+swRep = '\nStart downloading files? : RETURN/ENTER';
+input(swRep);
+
+% Start
 [numIPACard,~] = size(strListSnd{1});
-for i = numIPACard
+for i = 1:numIPACard
     
     % ID
     numSnd = i;
@@ -53,3 +63,7 @@ for i = numIPACard
     [Snd] = websave(dirNameSnd,strUrlSnd);
     
 end
+
+disp('========================================')
+disp('Finish!!!');
+disp('========================================')
