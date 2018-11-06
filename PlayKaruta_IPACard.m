@@ -52,7 +52,7 @@ end
 
 % Stack card IDs
 numIPACard = []; % Initialize
-for i = numSwType
+for i = 1:length(numSwType)
     if numSwType(i) == 1 % Vowels: 71~98
         numIPACard = horzcat(numIPACard,[71:98]);
     elseif numSwType(i) == 2     % Consonants (pulmonic): 1~59
