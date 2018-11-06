@@ -7,6 +7,7 @@
 % Modified: 6 Nov. 2018
 %
 % Example: 
+% > Select type(s) -> 0 (all)
 % > Select type(s) -> 1 (vowels)
 % > Select type(s) -> 1 2 3 (vowels and consonants)
 %
@@ -36,6 +37,7 @@ strMsg = [...
         ' Author: YamaKatsu (@kyama0321)\n',...
         ' Date: 6 Nov. 2018\n',...
         '========================================\n',...
+        '   0. All: No.1 ~ No.111 \n',...
         '   1. Vowels: No.71 ~ No.98 \n',...
         '   2. Consonants (pulmonic): No.1 ~ No.59\n',...
         '   3. Consonants (non-pulmonic): No.60 ~ No.70, No.109 ~ No.111\n',...
@@ -53,7 +55,9 @@ end
 % Stack card IDs
 numIPACard = []; % Initialize
 for i = 1:length(numSwType)
-    if numSwType(i) == 1 % Vowels: 71~98
+    if numSwType(i) == 0 % All: 1~111
+        numIPACard = horzcat(numIPACard,[1:111]);
+    elseif numSwType(i) == 1 % Vowels: 71~98
         numIPACard = horzcat(numIPACard,[71:98]);
     elseif numSwType(i) == 2     % Consonants (pulmonic): 1~59
         numIPACard = horzcat(numIPACard,[1:59]);
@@ -62,7 +66,7 @@ for i = 1:length(numSwType)
     elseif numSwType(i) == 4     % Other symbols: 99~108
         numIPACard = horzcat(numIPACard,[99:108]);
     else                    % All: 1~111;
-        error('Set training courses: 1~4');
+        error('Set training courses: 0~4');
     end
 end
 
