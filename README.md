@@ -6,9 +6,13 @@ Matlab scripts for the IPA Card Set
 このリポジトリでは「IPAカードセット」専用の音声読み上げスクリプト(Matlab版)を公開しています．
 
 - 国際音声記号(IPA)については以下のリンクを参照してください．
+
 -- [The International Phonetic Alphabet and the IPA Chart](https://www.internationalphoneticassociation.org/content/ipa-chart)
+
 -- [IPA(国際音声記号)の基礎 : 言語学・音声学を学んでいない人のために](https://www.jstage.jst.go.jp/article/jasj/66/4/66_KJ00006254176/_article/-char/ja/)
+
 - IPAカードセットについては以下のリンクを参照してください．
+
 -- [IPAカードセット - TwiFULL Press通販部](https://twifullpress.booth.pm/items/803305)
 
 # 動作環境
