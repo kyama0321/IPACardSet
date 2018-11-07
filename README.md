@@ -136,7 +136,7 @@ Finish!!!
 
 というグループ分けが行われており，この中から再生したいグループ（かるたのレベル）を選択することになります．
 
-1. はじめに，Matlabを起動しPlayTrain_IPACard.mファイルを実行します．
+1. はじめに，Matlabを起動しPlayKaruta_IPACard.mファイルを実行します．
 ```
 PlayKaruta_IPACard
 ```
