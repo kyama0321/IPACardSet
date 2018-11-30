@@ -113,7 +113,7 @@ for j = numPlaySnd
     % Play playSndCalib
     swRep = 'y';
     while swRep == 'y'
-        for j = 1:numRep
+        for k = 1:numRep
             
             pause(1.0)
             sound(playSndCalib, fs);
